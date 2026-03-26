@@ -74,6 +74,8 @@ def serve(
         port=port,
         forwarded_allow_ips='*',
         workers=UVICORN_WORKERS,
+        ssl_keyfile=os.environ.get('UVICORN_SSL_KEYFILE'),
+        ssl_certfile=os.environ.get('UVICORN_SSL_CERTFILE'),
     )
 
 
